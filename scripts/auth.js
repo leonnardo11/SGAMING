@@ -34,8 +34,7 @@ function register() {
     localStorage.setItem("email", email.value);
     localStorage.setItem("cpf", cpf.value);
     localStorage.setItem("telephone", tel.value);
-    alert("Sua conta foi criada com sucesso");
-    window.location.href = "login.html";
+    Swal.fire("Bem Vindo!", "Sua conta foi criada com sucesso!", "success");
   }
 }
 
@@ -47,9 +46,8 @@ function login() {
   var userPw = document.getElementById("password");
 
   if (userEmail.value == storedEmail && userPw.value == storedPw) {
-    alert("Usuário logado com sucesso." + userEmail.value);
-    window.location.href = "https://google.com.br";
+    Swal.fire("Sucessoo!", "Usuário logado", "success");
   } else {
-    alert("Usuário ou senha incorreto.");
+    Swal.fire("Erro!", "Usuário ou senha incorretos.", "error");
   }
 }
