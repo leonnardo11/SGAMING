@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Saira+Stencil+One&display=swap");
+
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Saira Condensed", sans-serif;
+}
+
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../imagens/GT_BG_Patterns_v1-04.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.direita {
+  width: 40vw;
+  height: 100vh;
+}
+
+.esquerda {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../imagens/login-background.jpg);
+  width: 55vw;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 130px;
+  line-height: 205px;
+  color: red;
+  width: 592px;
+  height: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(100, end) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+h2 {
+  width: 446px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 79px;
+  padding-left: 0.5%;
+}
+
+.textos {
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+.textos table {
+  font-size: 1.3em;
+  font-style: normal;
+  font-weight: 300;
+  margin-top: 5%;
+}
+
+.textos table p {
+  padding-left: 1%;
+  padding-top: 2%;
+  width: 467px;
+  height: 39px;
+}
+
+.textos table tr:nth-child(2) img {
+  width: 42px;
+  height: 42px;
+}
+
+.textos table tr td {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.login-header p{
+    font-size: 70px;
+    color: red;
+    font-family: "Saira Stencil One";
+    margin-left: 15%;
+    margin-top: 20%;
+}
+
+.login-body{
+    margin-left: 15%;
+    
+}
+
+.login-body input {
+  width: 600px;
+  height: 55px;
+  background: #d8d8d8;
+  border-radius: 6px;
+  display: block;
+  color: black;
+  padding-left: 10px;
+  font-weight: 500;
+ 
+}
+
+.login-body label{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.login-body button {
+  width: 150px;
+  height: 50px;
+  font-size: 2em;
+  background: #ff5c00;
+  border-radius: 6px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.login-body button:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+
+  a{
+      text-decoration: none;
+      font-size: 1.3em;
+      margin-top: 20px;
+  }
+
+  a:hover{
+      color: blue;
+
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+}

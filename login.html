@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LOGIN -SGAMING - SUA REDE SOCIAL GAMER PARA COMPARTILHAS SEUS MELHORES MOMENTOS"
+    />
+    <link rel="stylesheet" href="styles/login.css" />
+    <script src="scripts/auth.js"></script>
+    <title>LOGIN - SGAMING</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="esquerda">
+          <div class="textos">
+            <h1>SGAMING</h1>
+            <h2>SUA REDE SOCIAL GAMER</h2>
+            <table>
+                <tr>
+                  <td>
+                    <img src="imagens/uil_game-structure.png" alt="" />
+                    <p>COMPARTILHE SUAS MELHORES JOGADAS</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="imagens/Icones.png" alt="" srcset="" />
+                    <p>ENCONTRE NOVOS PARCEIROS PARA SUAS JOGATINAS</p>
+                  </td>
+                </tr>
+              </table>
+          </div>
+          
+        </div>
+        <div class="direita">
+          <div class="login-box">
+              <div class="login-header">
+                  <p>LOGIN</p>
+              </div>
+                <div class="login-body">
+                    <form method="POST">
+                            <label for="email">Usuario</label>
+                            <input type="email" name="email" id="email">
+                            <label for="password">Senha</label>
+                            <input type="password" name="password" id="password">
+                        <button type="submit" onclick="login()">Entrar</button>
+                    </form>
+                    <a href="register.html">Não tenho uma conta</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

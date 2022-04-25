@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LOGIN -SGAMING - SUA REDE SOCIAL GAMER PARA COMPARTILHAS SEUS MELHORES MOMENTOS"
+    />
+    <link rel="stylesheet" href="styles/register.css" />
+    <script src="scripts/auth.js"></script>
+    <title>CADASTRAR - SGAMING</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="esquerda">
+          <div class="textos">
+            <h1>SGAMING</h1>
+            <h2>SUA REDE SOCIAL GAMER</h2>
+            <table>
+                <tr>
+                  <td>
+                    <img src="imagens/uil_game-structure.png" alt="" />
+                    <p>COMPARTILHE SUAS MELHORES JOGADAS</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="imagens/Icones.png" alt="" srcset="" />
+                    <p>ENCONTRE NOVOS PARCEIROS PARA SUAS JOGATINAS</p>
+                  </td>
+                </tr>
+              </table>
+          </div>
+          
+        </div>
+        <div class="direita">
+          <div class="login-box">
+              <div class="login-header">
+                  <p>Criar conta</p>
+              </div>
+                <div class="login-body">
+                    <form method="POST">
+                      <fieldset>
+                        <label for="name">Nome</label>
+                        
+                        <input type="name" name="name" id="name" minlength="3" maxlength="50" required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" minlength="1" maxlength="50" required>
+                      </fieldset>
+
+                      <fieldset>
+                        <div>
+                          <label for="password">Senha</label>
+                          <input type="password" name="password" id="password" required>
+                        </div>
+                        <div>
+                          <label for="password">Confirme sua senha</label>
+                          <input type="password" name="confirm-pass" id="confirm-pass" required>
+                        </div>
+                      </fieldset>
+
+                      <fieldset>
+                        <div>
+                          <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="cpf" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" title="Insira um CPF no FORMATO xxx.xxx.xxx-xx" required>
+                        </div>
+                        <div>
+                          <label for="telephone">Telefone</label>
+                          <input type="number" name="telephone" id="telephone" required>
+                        </div>
+                       
+                      </fieldset>
+                            
+                        <button type="submit" onclick="register()">Cadastrar</button>
+                    </form>
+                    <a href="login.html">Já tenho uma conta</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
