@@ -98,7 +98,7 @@ h2 {
     color: red;
     font-family: "Saira Stencil One";
     margin-left: 15%;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 .login-body{
@@ -140,7 +140,7 @@ h2 {
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(0, 0, 0);
-    opacity: 1; /* Firefox */
+    opacity: 0.5; /* Firefox */
   }
 
   a{
