@@ -12,7 +12,6 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="styles/login.css" />
     <script src="scripts/auth.js"></script>
     <title>LOGIN - SGAMING</title>
@@ -47,12 +46,12 @@
                   <p>LOGIN</p>
               </div>
                 <div class="login-body">
-                    <form method="POST">
-                            <label for="email">Usuario</label>
-                            <input type="email" name="email" id="email">
+                    <form>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Digite o seu email de cadastro">
                             <label for="password">Senha</label>
-                            <input type="password" name="password" id="password">
-                        <button type="submit" onclick="login()">Entrar</button>
+                            <input type="password" name="password" id="password" placeholder="Digite a sua senha">
+                        <button type="button" onclick="login();">Entrar</button>
                     </form>
                     <a href="register.html">Não tenho uma conta</a>
           </div>

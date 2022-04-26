@@ -1,3 +1,15 @@
+
+
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+}
+
 function register() {
   var name = document.getElementById("name");
   var email = document.getElementById("email");
@@ -29,13 +41,14 @@ function register() {
   } else if (!pw.value.match(upperCaseLetters)) {
     alert("A Senha precisa ter uma letra maiuscula");
   } else {
+    
     localStorage.setItem("name", name.value);
     localStorage.setItem("pw", pw.value);
     localStorage.setItem("email", email.value);
     localStorage.setItem("cpf", cpf.value);
     localStorage.setItem("telephone", tel.value);
     alert("Sua conta foi criada com sucesso");
-    window.location.href = "login.html";
+    window.location.href = "/login.html";
   }
 }
 
@@ -48,7 +61,7 @@ function login() {
 
   if (userEmail.value == storedEmail && userPw.value == storedPw) {
     alert("Usuário logado com sucesso." + userEmail.value);
-    window.location.href = "https://google.com.br";
+    window.location.href = "/index.html";
   } else {
     alert("Usuário ou senha incorreto.");
   }
