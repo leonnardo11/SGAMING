@@ -51,32 +51,31 @@
                       <fieldset>
                         <label for="name">Nome</label>
                         
-                        <input type="name" name="name" id="name" minlength="3" maxlength="50" required>
+                        <input type="name" name="name" id="name" minlength="3" maxlength="50" placeholder="Insira o seu nome..." required>
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" minlength="1" maxlength="50" required>
+                        <input type="email" name="email" id="email" minlength="1" maxlength="50" placeholder="Insira o seu email..." required>
                       </fieldset>
 
                       <fieldset>
                         <div>
                           <label for="password">Senha</label>
-                          <input type="password" name="password" id="password" required>
+                          <input type="password" name="password" id="password" placeholder="Insira uma senha com no min 6 caracteres" required>
                         </div>
                         <div>
                           <label for="password">Confirme sua senha</label>
-                          <input type="password" name="confirm-pass" id="confirm-pass" required>
+                          <input type="password" name="confirm-pass" id="confirm-pass" placeholder="confirme sua senha" required>
                         </div>
                       </fieldset>
 
                       <fieldset>
                         <div>
                           <label for="cpf">CPF</label>
-                        <input type="text" name="cpf" id="cpf" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" title="Insira um CPF no FORMATO xxx.xxx.xxx-xx" required>
+                        <input type="text" name="cpf" id="cpf" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" title="Insira um CPF no FORMATO xxx.xxx.xxx-xx" placeholder="Insira um CPF no FORMATO xxx.xxx.xxx-xx" required>
                         </div>
                         <div>
                           <label for="telephone">Telefone</label>
-                          <input type="number" name="telephone" id="telephone" required>
+                          <input type="text" name="telephone" id="telephone" placeholder="Insira seu telefone no formato (xx) xxxxx-xxxx"  required>
                         </div>
-                       
                       </fieldset>
                             
                         <button type="submit" onclick="register()">Cadastrar</button>

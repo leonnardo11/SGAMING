@@ -139,7 +139,7 @@ h2 {
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: red;
+    color: rgb(0, 0, 0);
     opacity: 1; /* Firefox */
   }
 
