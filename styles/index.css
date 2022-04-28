@@ -34,12 +34,7 @@
         color: #ff0000;
   }
 
-  header .content p{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 25px;
-        padding-top: 1%;
-  }
+
 
   .container{
         display: flex;
@@ -89,4 +84,29 @@
   .textarea button:hover{
         cursor: pointer;
         transform: scale(0.9);
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    padding-top: 1%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #37394E;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    cursor: pointer;
   }
