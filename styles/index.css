@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Saira+Stencil+One&display=swap");
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Saira Condensed", sans-serif;
+  }
+
+  body{
+      background-color: #242526;
+  }
+
+  header{
+     background-color: #37394E;
+     width: 100vw;
+     height: 70px;
+  }
+
+  header .content{
+        display: flex;
+        justify-content: space-between;
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0.2%;
+  }
+
+  header .content h1{
+        font-family: "Saira Stencil One";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        color: #ff0000;
+  }
+
+  header .content p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        padding-top: 1%;
+  }
+
+  .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+  }
+
+  .main-title{
+    text-align: right;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+  }
+
+  .textarea  {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .textarea form textarea{
+        width: 1000px;
+        height: 150px;
+        background-color: #37394E;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Segoe UI';
+        resize: none;
+        border-radius: 5px;
+        border: 2px solid #000000;
+        overflow: auto;
+        outline: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+  }
+
+  .textarea button{
+      width: 118px;
+      height: 50px;
+      border-radius: 5px;
+      background: #FF5C00;
+      font-size: 1.4em;
+  }
+
+  .textarea button:hover{
+        cursor: pointer;
+        transform: scale(0.9);
+  }

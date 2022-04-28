@@ -6,9 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDEX</title>
     <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
-    <h1>Você está logado!</h1>
-    <button onclick="showUserInformation()">teste</button>
+  <header>
+      <div class="content">
+        <h1 class="animate__animated animate__backInLeft">SGAMING</h1>
+        <p class="animate__animated animate__backInRight">Olá, Leonardo</p>
+      </div>
+  </header>
+  <main>
+    <div class="container">
+        <p class="main-title">Publicação</p>
+      <div class="textarea">
+          <form id="form">
+            <div>
+                <textarea name="textbox" id="textbox" cols="30" rows="10" placeholder="no que você esta pensando?"></textarea>
+            </div>
+          </form>
+          <button type="submit" form="form">Enviar</button>
+      </div>
+      <section class="feed">
+          <div class="poster">
+              <div class="header">
+                <img src="imagens/uil_game-structure.png" alt="">
+                <p>Leonardo Rodrigues</p>
+                <p>São Paulo - SP</p>
+              </div>
+              <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem!</p>
+              </div>
+          </div>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
