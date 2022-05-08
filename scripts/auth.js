@@ -1,12 +1,10 @@
-
-
-function formatar(mascara, documento){
+function formatar(mascara, documento) {
   var i = documento.value.length;
-  var saida = mascara.substring(0,1);
-  var texto = mascara.substring(i)
-  
-  if (texto.substring(0,1) != saida){
-            documento.value += texto.substring(0,1);
+  var saida = mascara.substring(0, 1);
+  var texto = mascara.substring(i);
+
+  if (texto.substring(0, 1) != saida) {
+    documento.value += texto.substring(0, 1);
   }
 }
 
@@ -41,28 +39,65 @@ function register() {
   } else if (!pw.value.match(upperCaseLetters)) {
     alert("A Senha precisa ter uma letra maiuscula");
   } else {
-    
-    localStorage.setItem("name", name.value);
-    localStorage.setItem("pw", pw.value);
-    localStorage.setItem("email", email.value);
-    localStorage.setItem("cpf", cpf.value);
-    localStorage.setItem("telephone", tel.value);
-    alert("Sua conta foi criada com sucesso");
-    window.location.href = "/login.html";
+    let user = JSON.parse(localStorage.getItem("user")) || []; //pega o array de usuarios do localStorage e se não existir cria um novo array vazio para o usuario logar no sistema
+    user.push({
+      name: name.value,
+      email: email.value,
+      password: pw.value,
+      cpf: cpf.value,
+      telephone: tel.value,
+    }); //Adicionando um novo usuário ao array de usuarios(user)
+
+    localStorage.setItem("user", JSON.stringify(user)); //salva o array de usuarios no localStorage
+    alert("Sua conta foi criada com sucesso"); //alerta que a conta foi criada com sucesso
+    window.location.href = "/login.html"; //redireciona para a página de login
   }
 }
 
 //checking
-function login() {
-  var storedEmail = localStorage.getItem("email");
-  var storedPw = localStorage.getItem("pw");
-  var userEmail = document.getElementById("email");
-  var userPw = document.getElementById("password");
 
-  if (userEmail.value == storedEmail && userPw.value == storedPw) {
-    alert("Usuário logado com sucesso." + userEmail.value);
-    window.location.href = "/index.html";
+function login() {
+  let email = document.querySelector("#email");
+  let pw = document.querySelector("#password");
+
+  let user = []; //
+
+  let userValid = {
+    name: "",
+    email: "",
+    pw: "",
+  };
+
+  user = JSON.parse(localStorage.getItem("user"));
+
+  user.forEach((item) => {
+    if (email.value == item.email && pw.value == item.password) {
+      //verifica se o email e a senha são iguais aos dos usuarios cadastrados
+      userValid = {
+        name: item.name,
+        email: item.email,
+        pw: item.password,
+      };
+    }
+  });
+
+  if (email.value == "" && pw.value == "") {
+    //verifica se o email e a senha estão vazios
+    alert("Por favor insira um email e uma senha");
   } else {
-    alert("Usuário ou senha incorreto.");
+    //se não estiverem vazios entra no if abaixo
+    if (email.value == userValid.email && pw.value == userValid.pw) {
+      //verifica se o email e a senha são iguais aos dos usuarios cadastrados
+      alert("Login realizado com sucesso");
+      window.location.href = "/index.html";
+
+      let token =
+        Math.random().toString(36).substring(2, 15) +
+        Math.random().toString(36).substring(2, 15); //gera um token aleatorio
+      sessionStorage.setItem("token", token);
+      sessionStorage.setItem("userLogado", JSON.stringify(userValid)); //salva o usuario logado no sessionStorage
+    } else {
+      alert("Email ou senha incorretos");
+    }
   }
 }

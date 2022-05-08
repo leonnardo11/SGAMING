@@ -113,15 +113,15 @@
       margin-top: 10px;
       background-color: #37394E;
       color: white;
-      padding: 10px;
       font-family: 'Segoe UI';
       border-radius: 5px;
-      border: 2px solid #000000;
+      border: 1px solid #FF5C00;
   }
 
   .poster .header{
         display: flex;
-        padding-top: 6px;
+        padding-top: 10px;
+        padding-left: 10px;
   }
 
   .poster .header  img{
@@ -134,8 +134,12 @@
             border-width: 1px;
   }
 
+  .poster .content p{
+        padding-left: 10px;
+  }
+
   .poster .content img{
-       width: 1000px;
+       width: 100%;
   }
 
   .poster .header p:nth-of-type(1){
@@ -149,7 +153,8 @@
 
 .poster .content p{
       font-size: 1.2em;
-      font-weight: 300;
+      font-weight: 400;
       padding-top: 10px;
-      padding-bottom: 5px;
+      padding-bottom: 10px;
+      font-family: 'Segoe UI';
 }
