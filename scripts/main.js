@@ -15,6 +15,7 @@ function logout() {
 
 function postData() {
   let textbox = document.getElementById("textbox");
+
   let posts = JSON.parse(localStorage.getItem("posts")) || [];
   posts.push({
     contentText: textbox.value,
