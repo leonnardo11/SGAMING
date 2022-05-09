@@ -46,16 +46,13 @@ function register() {
       password: pw.value,
       cpf: cpf.value,
       telephone: tel.value,
-    }); //Adicionando um novo usuário ao array de usuarios(user)
+    }); 
 
     localStorage.setItem("user", JSON.stringify(user)); //salva o array de usuarios no localStorage
     alert("Sua conta foi criada com sucesso"); //alerta que a conta foi criada com sucesso
     window.location.href = "/login.html"; //redireciona para a página de login
   }
 }
-
-//checking
-
 function login() {
   let email = document.querySelector("#email");
   let pw = document.querySelector("#password");
@@ -69,7 +66,6 @@ function login() {
   };
 
   user = JSON.parse(localStorage.getItem("user"));
-
   user.forEach((item) => {
     if (email.value == item.email && pw.value == item.password) {
       //verifica se o email e a senha são iguais aos dos usuarios cadastrados
@@ -91,9 +87,7 @@ function login() {
       alert("Login realizado com sucesso");
       window.location.href = "/index.html";
 
-      let token =
-        Math.random().toString(36).substring(2, 15) +
-        Math.random().toString(36).substring(2, 15); //gera um token aleatorio
+      let token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15); //gera um token aleatorio
       sessionStorage.setItem("token", token);
       sessionStorage.setItem("userLogado", JSON.stringify(userValid)); //salva o usuario logado no sessionStorage
     } else {
