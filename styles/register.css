@@ -177,3 +177,107 @@ fieldset:nth-child(3) div:nth-child(2) {
 fieldset:nth-child(3) input {
   width: 290px;
 }
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+  .esquerda {
+    display: none;
+  }
+  .direita {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .direita {
+    width: 100vw;
+    height: auto;
+  }
+  .login-body input {
+    width: 92%;
+  }
+  .login-body {
+    margin-left: 20px;
+  }
+  .login-header p {
+    font-size: 50px;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+  fieldset:nth-child(2) {
+    display: block;
+  }
+
+  fieldset:nth-child(2) div:nth-child(2) {
+    padding-left: 0px;
+  }
+  fieldset:nth-child(3) {
+    display: block;
+  }
+
+  fieldset:nth-child(3) div:nth-child(2) {
+    padding-left: 0px;
+  }
+  .login-body button {
+    margin-bottom: 10px;
+  }
+  fieldset:nth-child(2) input {
+    width: 90%;
+  }
+  fieldset:nth-child(3) input {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .direita {
+    width: 100vw;
+    height: auto;
+  }
+  .login-body {
+    margin-left: 20px;
+  }
+  .login-header p {
+    font-size: 50px;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+  .login-body input {
+    width: 90%;
+  }
+  fieldset:nth-child(2) {
+    display: block;
+  }
+
+  fieldset:nth-child(2) div:nth-child(2) {
+    padding-left: 0px;
+  }
+  fieldset:nth-child(3) {
+    display: block;
+  }
+
+  fieldset:nth-child(3) div:nth-child(2) {
+    padding-left: 0px;
+  }
+  .login-body button {
+    margin-bottom: 10px;
+  }
+  fieldset:nth-child(2) input {
+    width: 90%;
+  }
+  fieldset:nth-child(3) input {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .direita {
+    width: 100vw;
+    height: auto;
+  }
+  .login-body {
+    margin-left: 20px;
+  }
+}
