@@ -64,6 +64,8 @@ header .content h1 {
   box-shadow: none;
   display: block;
   margin: 20px auto;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
 
 .textarea button {
@@ -133,6 +135,7 @@ header .content h1 {
 
 .poster .content p {
   padding-left: 10px;
+  max-width: 100%;
 }
 
 .poster .content img {
@@ -172,5 +175,54 @@ span{
       font-size: 0.5em;
       font-weight: 400;
       font-family: "Segoe UI";
+}
+
+
+@media screen and (max-width: 1000px) {
+  header{
+    width: 100vw;
+  }
+  header .content {
+    width: 95%;
+  }
+  #user{
+    margin-right: 60px;
+  }
+  .container {
+    width: 95%;
+  }
+  .textarea {
+    width: 95%;
+  }
+  .textarea form textarea {
+    width: 95%;
+  }
+  .poster {
+    width: 98%;
+  }
+  .feed {
+    width: 95%;
+    padding-left: 20px;
+  }
+  .textarea button {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .dropdown{
+    font-size: 25px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header .content h1 {
+    font-size: 30px;
+    padding-top: 10px;
+  }
+  .dropdown{
+    font-size: 20px;
+    padding-top: 18px;
+  }
 }
 
