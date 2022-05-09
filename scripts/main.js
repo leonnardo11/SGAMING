@@ -1,6 +1,13 @@
 if (sessionStorage.getItem("token") == null) {
-  alert("Você precisa estar logado para acessar essa página");
-  window.location.href = "/login.html";
+    console.log('nao logado');
+    Swal.fire({
+        title: 'Error!',
+        text: 'Você precisa estar logado para acessar esta página.',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      }).then(function() {
+        window.location = "login.html";
+    });
 }
 
 let userLogado = JSON.parse(sessionStorage.getItem("userLogado"));
