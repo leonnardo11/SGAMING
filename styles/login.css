@@ -168,6 +168,26 @@ h2 {
   }
 }
 
+@media screen and (max-width: 600px) {
+  *{
+    overflow: hidden;
+  }
+  .direita{
+    width: 100vw;
+    height: 100vh;
+  }
+  .login-body input{
+    width: 92%;
+  }
+  .login-body{
+    margin-left: 20px;
+   }
+   .login-header p{
+    font-size: 50px;
+    margin-left: 20px;
+}
+}
+
 @media screen and (max-width: 412px) {
   *{
     overflow: hidden;
@@ -183,7 +203,6 @@ h2 {
       font-size: 50px;
       margin-left: 20px;
   }
-  
   .login-body input{
     width: 90%;
   }
