@@ -179,6 +179,9 @@ span{
 
 
 @media screen and (max-width: 1000px) {
+  *{
+    overflow-x: hidden;
+  }
   header{
     width: 100vw;
   }
@@ -209,6 +212,9 @@ span{
   }
 }
 @media screen and (max-width: 540px) {
+  *{
+    overflow-x: hidden;
+  }
   .dropdown{
     font-size: 25px;
     padding-top: 10px;
