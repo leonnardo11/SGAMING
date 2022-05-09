@@ -4,6 +4,8 @@ if (sessionStorage.getItem("token") == null) {
 }
 
 let userLogado = JSON.parse(sessionStorage.getItem("userLogado"));
+const HTML = document.getElementById('user') 
+HTML.innerHTML = `Oi ${userLogado.name}`
 
 function logout() {
   sessionStorage.removeItem("token");
