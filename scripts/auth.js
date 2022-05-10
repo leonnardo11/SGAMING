@@ -94,8 +94,9 @@ function register() {
       text: 'Usuario cadastrado com sucesso. Por favor, faça login com o email e senha que você escolheu.',
       icon: 'success',
       confirmButtonText: 'Ok'
-    }) //alerta que a conta foi criada com sucesso
-    window.location.href = "/login.html"; //redireciona para a página de login
+    }).then(() => {
+      window.location = "/login.html";
+  });
   }
 }
 function login() {
