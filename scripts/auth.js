@@ -21,35 +21,7 @@ function register() {
   var upperCaseLetters = /[A-Z]/g;
   var numbers = /[0-9]/g;
 
-  if (email.value.length == 0) {
-    Swal.fire({
-      title: 'Error!',
-      text: 'Você precisa inserir um email válido.',
-      icon: 'error',
-      confirmButtonText: 'Ok'
-    })
-  } else if (pw.value.length == 0) {
-    Swal.fire({
-      title: 'Error!',
-      text: 'Você precisa inserir uma senha válida.',
-      icon: 'error',
-      confirmButtonText: 'Ok'
-    })
-  } else if (pw.value.length == 0 && email.value.length == 0) {
-    Swal.fire({
-      title: 'Error!',
-      text: 'Você precisa inserir um email e senha válidos.',
-      icon: 'error',
-      confirmButtonText: 'Ok'
-    })
-  } else if (cpf.value.length == 0) {
-    Swal.fire({
-      title: 'Error!',
-      text: 'Você precisa inserir um cpf.',
-      icon: 'error',
-      confirmButtonText: 'Ok'
-    })
-  } else if (pw.value.length < 6) {
+  if (pw.value.length < 6) {
     Swal.fire({
       title: 'Error!',
       text: 'Sua senha deve conter no mínimo 6 caracteres.',
@@ -81,11 +53,12 @@ function register() {
   } else {
     let user = JSON.parse(localStorage.getItem("user")) || []; //pega o array de usuarios do localStorage e se não existir cria um novo array vazio para o usuario logar no sistema
     user.push({
-      name: name.value,
-      email: email.value,
-      password: pw.value,
-      cpf: cpf.value,
-      telephone: tel.value,
+      id: user.length + 1, //adiciona um id ao usuario
+      name: name.value, //adiciona o nome do usuario
+      email: email.value, //adiciona o email do usuario
+      password: pw.value, //adiciona a senha do usuario
+      cpf: cpf.value, //adiciona o cpf do usuario
+      telephone: tel.value, //adiciona o telefone do usuario
     }); 
 
     localStorage.setItem("user", JSON.stringify(user)); //salva o array de usuarios no localStorage
@@ -95,7 +68,7 @@ function register() {
       icon: 'success',
       confirmButtonText: 'Ok'
     }).then(() => {
-      window.location = "/login.html";
+      window.location = "/index.html";
   });
   }
 }
@@ -103,19 +76,20 @@ function login() {
   let email = document.querySelector("#email");
   let pw = document.querySelector("#password");
 
-  let user = []; //
+  let user = []; //cria um array vazio para armazenar os usuarios do localStorage
 
-  let userValid = {
-    name: "",
-    email: "",
-    pw: "",
+  let userValid = { //cria um objeto com os dados do usuario validado para ser salvo no localStorage
+    id: 0, //adiciona um id ao usuario validado para ser salvo no localStorage
+    name: "", //adiciona o nome do usuario validado para ser salvo no localStorage
+    email: "", //adiciona o email do usuario validado para ser salvo no localStorage
+    pw: "", //adiciona a senha do usuario validado para ser salvo no localStorage
   };
 
-  user = JSON.parse(localStorage.getItem("user"));
-  user.forEach((item) => {
-    if (email.value == item.email && pw.value == item.password) {
-      //verifica se o email e a senha são iguais aos dos usuarios cadastrados
+  user = JSON.parse(localStorage.getItem("user")); //pega o array de usuarios do localStorage e se não existir cria um novo array vazio para o usuario logar no sistema
+  user.forEach((item) => { //percorre o array de usuarios do localStorage e verifica se o email e senha digitados pelo usuario são iguais aos do localStorage
+    if (email.value == item.email && pw.value == item.password) { //verifica se o email e a senha são iguais aos dos usuarios cadastrados no localStorage e armazena os dados do usuario validado no objeto userValid
       userValid = {
+        id: item.id,
         name: item.name,
         email: item.email,
         pw: item.password,
@@ -123,23 +97,19 @@ function login() {
     }
   });
 
-  if (email.value == "" && pw.value == "") {
-    //verifica se o email e a senha estão vazios
+  if (email.value == "" && pw.value == "") { //verifica se o email e a senha estão vazios e retorna um alerta
     Swal.fire({
       title: 'Error!',
       text: 'Você precisa inserir um email e senha.',
       icon: 'error',
       confirmButtonText: 'Ok'
     })
-  } else {
-    //se não estiverem vazios entra no if abaixo
-    if (email.value == userValid.email && pw.value == userValid.pw) {
-      //verifica se o email e a senha são iguais aos dos usuarios cadastrados
-      window.location.href = "/index.html";
-
+  } else {//se não estiverem vazios entra no if abaixo
+    if (email.value == userValid.email && pw.value == userValid.pw) { //verifica se o email e a senha são iguais aos dos usuarios cadastrados no localStorage e armazena os dados do usuario validado no objeto userValid
+      window.location.href = "/feed.html"; //se o usuario estiver correto redireciona para a pagina de feed
       let token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15); //gera um token aleatorio
-      sessionStorage.setItem("token", token);
-      sessionStorage.setItem("userLogado", JSON.stringify(userValid)); //salva o usuario logado no sessionStorage
+      sessionStorage.setItem("token", token); //salva o token no sessionStorage
+      sessionStorage.setItem("userLogado", JSON.stringify(userValid)); //salva o usuario logado no sessionStorage como um objeto
     } else {
       Swal.fire({
         title: 'Error!',

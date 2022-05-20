@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INDEX</title>
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LOGIN -SGAMING - SUA REDE SOCIAL GAMER PARA COMPARTILHAS SEUS MELHORES MOMENTOS"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
-<body>
-  <header>
-      <div class="content">
-        <h1 class="animate__animated animate__backInLeft">SGAMING</h1>
-        <div class="dropdown animate__animated animate__backInRight">
-          <p id="user"></p>
-            <div class="dropdown-content">
-            <p onclick="logout()">Deslogar</p>
-            </div>
+    <link rel="stylesheet" href="styles/login.css" />
+    <script src="scripts/auth.js"></script>
+    <title>LOGIN - SGAMING</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="esquerda">
+          <div class="textos">
+            <h1>SGAMING</h1>
+            <h2>SUA REDE SOCIAL GAMER</h2>
+            <table>
+                <tr>
+                  <td class="animate__animated animate__backInLeft">
+                    <img src="imagens/uil_game-structure.png" alt="" />
+                    <p>COMPARTILHE SUAS MELHORES JOGADAS</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="animate__animated animate__backInLeft">
+                    <img src="imagens/Icones.png" alt="" srcset="" />
+                    <p>ENCONTRE NOVOS PARCEIROS PARA SUAS JOGATINAS</p>
+                  </td>
+                </tr>
+              </table>
           </div>
+          
+        </div>
+        <div class="direita">
+          <div class="login-box">
+              <div class="login-header">
+                  <p>LOGIN</p>
+              </div>
+                <div class="login-body">
+                    <form>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Digite o seu email de cadastro" required>
+                            <label for="password">Senha</label>
+                            <input type="password" name="password" id="password" placeholder="Digite a sua senha" required>
+                        <button type="button" onclick="login();">Entrar</button>
+                    </form>
+                    <a href="register.html">Não tenho uma conta</a>
+          </div>
+        </div>
       </div>
-  </header>
-  <main>
-    
-    <div class="container">
-      <div class="textarea">
-          <form id="form">
-            <div>
-                <textarea name="textbox" id="textbox" cols="30" rows="10" placeholder="no que você esta pensando?" minlength="1" maxlength="2000"></textarea>
-            </div>
-          </form>
-          <button type="button" form="form" onclick="postData()">Enviar</button>
-      </div>
-      <section class="feed" id="feed">
-        <h1>FEED</h1>
-</div>
-      </section>
-    </div>
-  </main>
-  <script src="scripts/main.js"></script>
-</body>
+    </main>
+  </body>
 </html>

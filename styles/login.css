@@ -168,6 +168,19 @@ h2 {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    
+  }
+  .esquerda img {
+    
+  }
+  .direita {
+    
+  }
+  
+}
+
 @media screen and (max-width: 600px) {
   *{
     overflow: hidden;
