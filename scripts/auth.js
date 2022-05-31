@@ -76,7 +76,7 @@ function login() {
   let email = document.querySelector("#email");
   let pw = document.querySelector("#password");
 
-  let user = []; //cria um array vazio para armazenar os usuarios do localStorage
+  let user = []; //cria um array vazio para armazenar os usuarios do localStorage 
 
   let userValid = { //cria um objeto com os dados do usuario validado para ser salvo no localStorage
     id: 0, //adiciona um id ao usuario validado para ser salvo no localStorage

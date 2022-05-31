@@ -52,10 +52,11 @@ function postData() {
   }
 }
 
+
 function getPostData() {
   let posts = JSON.parse(localStorage.getItem("posts")) || [];
   let feed = document.getElementById("feed");
-  posts.map((poster) => {
+  posts.map(poster => {
     if (poster.image) {
       feed.innerHTML += `  
       <div class="poster"> 

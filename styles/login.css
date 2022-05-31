@@ -13,6 +13,7 @@ body {
     url(../imagens/GT_BG_Patterns_v1-04.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .container {
@@ -137,6 +138,7 @@ h2 {
 .login-body button:hover{
     cursor: pointer;
     transform: scale(0.9);
+    
 }
 
 
@@ -168,18 +170,6 @@ h2 {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .container {
-    
-  }
-  .esquerda img {
-    
-  }
-  .direita {
-    
-  }
-  
-}
 
 @media screen and (max-width: 600px) {
   *{
