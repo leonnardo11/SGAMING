@@ -1,42 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INDEX</title>
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INDEX</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
   <header>
-      <div class="content">
-        <h1 class="animate__animated animate__backInLeft">SGAMING</h1>
-        <div class="dropdown animate__animated animate__backInRight">
-          <p id="user"></p>
-            <div class="dropdown-content">
-            <p onclick="logout()">Deslogar</p>
-            </div>
-          </div>
+    <div class="content">
+      <h1 class="animate__animated animate__backInLeft">SGAMING</h1>
+      <div class="dropdown animate__animated animate__backInRight">
+        <p id="user"></p>
+        <div class="dropdown-content">
+          <p onclick="logout()">Deslogar</p>
+        </div>
       </div>
+    </div>
   </header>
   <main>
-    
     <div class="container">
       <div class="textarea">
-          <form id="form">
-            <div>
-                <textarea name="textbox" id="textbox" cols="30" rows="10" placeholder="no que você esta pensando?" minlength="1" maxlength="2000"></textarea>
-                <input type="file" id="arquivo" >
-            </div>
-          </form>
-          <button type="button" form="form" onclick="postData()">Enviar</button>
+        <form id="form">
+          <div>
+            <textarea name="textbox" id="textbox" cols="30" rows="10" placeholder="no que você esta pensando?" minlength="1" maxlength="2000"></textarea>
+            <input type="file" id="arquivo" />
+
+          </div>
+        </form>
+        <div class="buttonsForm">
+        <button type="button" form="form" onclick="postData()">Enviar</button>
+        <button id="myBtn">Desenhar</button>
+        </div>
+        
       </div>
-      <section class="feed" id="feed">
-      </section>
+      <section class="feed" id="feed"></section>
+      
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="show-display" class="hidden">
+            <div id="toolbar">
+                <h1 style="color: black">Faça o seu Desenho</h1>
+                <button id="clear" class="buttonDraw">Clear</button>
+                <button id="save" class="buttonDraw">Save</button>
+                    <canvas id="drawing-board" width="500" height="500"
+                        style=" background-color: azure; margin-top: 10px; margin-bottom: 250px; border: 5px solid lightskyblue;">
+                    </canvas>
+            </div>
+
+
+        </div>
+        </div>
+      </div>
     </div>
   </main>
   <script src="scripts/main.js"></script>
 </body>
+
 </html>

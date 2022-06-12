@@ -1,4 +1,6 @@
-
+if(sessionStorage.getItem('token') != null){ 
+  window.location.href = "feed.html";
+}
 
 
 function formatar(mascara, documento) {
@@ -72,6 +74,7 @@ function register() {
   });
   }
 }
+
 function login() {
   let email = document.querySelector("#email");
   let pw = document.querySelector("#password");
