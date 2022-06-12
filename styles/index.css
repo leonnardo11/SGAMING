@@ -224,6 +224,13 @@ span{
       font-family: "Segoe UI";
 }
 
+#drawing-board{
+  background-color: rgb(255, 255, 255); 
+  border: 1px solid #ff5c00;
+}
+
+
+
 @media screen and (max-width: 1000px) {
   *{
     overflow-x: hidden;
